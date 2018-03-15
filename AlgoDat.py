@@ -36,5 +36,4 @@ with open('Data.csv', newline='') as csvfile:
 	data = csv.reader(csvfile)
 	for row in data:
 		array.append(make_user(row[1],row[2],row[0],row[9]))
-print(array[0].name)
 sort(array)	
