@@ -30,10 +30,10 @@ def sort(array):
 		return sort(less)+equal+sort(greater)
 	else: 
 		return array
-
-array=[]
-with open('Data.csv', newline='') as csvfile:
-	data = csv.reader(csvfile)
-	for row in data:
-		array.append(make_user(row[1],row[2],row[0],row[9]))
-sort(array)	
+def algorithm(CSV):
+	array=[]
+	with open(CSV, newline='') as csvfile:
+		data = csv.reader(csvfile)
+		for row in data:
+			array.append(make_user(row[1],row[2],row[0],row[9]))
+	return sort(array)	
